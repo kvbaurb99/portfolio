@@ -5,7 +5,7 @@ import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Line from '@/components/utils/Line.jsx'
 import LineBottom from '@/components/utils/LineBottom'
-import LineUnderProjects from '@/components/utils/LineUnderProjects'
+import LineUnderProjects from '@/components/Contact'
 
 
 export default function Home() {

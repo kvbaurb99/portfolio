@@ -1,12 +1,12 @@
 import React from 'react'
-import Computer from '../../assets/image.png'
+import Computer from '../assets/image.png'
 import Image from 'next/image'
 import { AiOutlineMail, AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai'
 import { containerVariants, skillsVariants } from '@/framer'
 import { useRef } from 'react'
 import { useInView, motion } from 'framer-motion'
 
-export default function LineUnderProjects() {
+export default function Contact() {
 
     const ref = useRef()
 
