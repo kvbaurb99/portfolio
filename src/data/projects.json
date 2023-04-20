@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Discord Clone",
+        "description": "ReactJS, Tailwind CSS, Node.js, Express, MySQL, Socket.IO",
+        "tag": "discord",
+        "link": "https://gregarious-licorice-62ad4f.netlify.app/"
+    },
+    {
+        "title": "Kanban Task Management",
+        "description": "ReactJS, Tailwind CSS, Node.js, Express, MongoDB, Socket.IO",
+        "tag": "kanban",
+        "link": "https://task-management-ju.netlify.app/"
+    },
+    {
+        "title": "MessageGPT3",
+        "description": "ReactJS, Tailwind CSS, Node.js, Express, MongoDB, Socket.IO",
+        "tag": "gpt",
+        "link": "https://messagegpt3.netlify.app/"
+    },
+    {
+        "title": "Audiophile",
+        "description": "ReactJS, Tailwind CSS",
+        "tag": "audiophile",
+        "link": "https://audiophile-kvbaur99.netlify.app/"
+    },
+    {
+        "title": "Issues Finder",
+        "description": "ReactJS, Redux, Redux-Saga, Tailwind CSS",
+        "tag": "finder",
+        "link": "https://issues-finder.netlify.app/"
+    }
+]
