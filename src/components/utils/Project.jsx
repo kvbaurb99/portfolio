@@ -29,7 +29,7 @@ export default function Project({ tag, description, link }) {
   }
 
   return (
-    <motion.div variants={animationVariant} ref={ref} initial='hidden' animate={isInView ? 'visible' : 'hidden'} className='w-full mx-auto xl:w-[45%] py-[5rem] xl:py-0 xl:h-[500px] rounded-2xl bg-stone-300 flex flex-col shadow-lg shadow-black items-center justify-center'>
+    <motion.div variants={animationVariant} ref={ref} initial='hidden' animate={isInView ? 'visible' : 'hidden'} className='w-full mx-auto xl:w-[45%] py-[3rem] xl:py-0 xl:h-[500px] rounded-2xl bg-stone-300 flex flex-col shadow-lg shadow-black items-center justify-center'>
       {imageSrc && (
         <Image
           src={imageSrc}

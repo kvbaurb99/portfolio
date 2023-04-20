@@ -4,7 +4,7 @@
 
 
 .wave-container {  
-  height: 25vh;
+  height: 40vh;
   position: relative;
 }
 
@@ -23,7 +23,7 @@
 
 @media(max-width:850px) {
   .wave-container::before {    
-    height: 67.5px
+    height: 65.5px
   }  
 }
 
@@ -92,7 +92,7 @@
 
 @media screen and (max-width: 1280px) {
   .wave-container-projects {
-    height: 75vh;
+    height: 80vh;
   }
 }
 
