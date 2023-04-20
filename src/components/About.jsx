@@ -30,7 +30,7 @@ export default function About() {
           handleNext();
         }, 15000);
         return () => clearTimeout(timer);
-      }, [currentPhotoIndex]);
+      }, [currentPhotoIndex, handleNext]);
 
 
   return (
@@ -56,7 +56,7 @@ export default function About() {
       </div>
         <motion.div ref={ref} initial={{opacity: 0, x: 100}} animate={isInView ? {opacity: 1, x: 0} : {opacity: 0, x: 100}} transition={{ duration: 1, delay: 0.5}}>
             <h2 className='text-3xl xl:text-5xl font-bold tracking-wider text-center 2xl:text-left md:text-5xl'>About me</h2>
-            <p className='mt-6 max-w-[90%] mx-auto xl:max-w-2xl text-center 2xl:text-left text-lg tracking-wide leading-[1.7] md:text-2xl md:leading-[1.8]'>Hi, my name is Jakub and I come from the beautiful mountainous region of southern Poland. As a self-taught front-end developer with one year of experience, I have a passion for building stunning and user-friendly websites that leave a lasting impression. When I'm not busy with coding, I love to indulge in my hobbies, such as playing video games and exploring different parts of the world through travel.</p>
+            <p className='mt-6 max-w-[90%] mx-auto xl:max-w-2xl text-center 2xl:text-left text-lg tracking-wide leading-[1.7] md:text-2xl md:leading-[1.8]'>Hi, my name is Jakub and I come from the beautiful mountainous region of southern Poland. As a self-taught front-end developer with one year of experience, I have a passion for building stunning and user-friendly websites that leave a lasting impression. When I&apos;m not busy with coding, I love to indulge in my hobbies, such as playing video games and exploring different parts of the world through travel.</p>
             <div className='flex md:gap-8 gap-6 xl:gap-6 mt-6 justify-center 2xl:justify-normal'>
                 <a target='_blank' href='https://www.linkedin.com/in/jakub-urba%C5%84ski-74903524a/'><div className='md:p-5 p-3 xl:p-3 bg-blue-600 rounded-full cursor-pointer hover:scale-110 duration-1000 hover:bg-blue-500'>
                     <SiLinkedin className='md:text-3xl xl:text-2xl text-xl  text-white' />
