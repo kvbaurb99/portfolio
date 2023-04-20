@@ -34,7 +34,7 @@ export default function About() {
 
 
   return (
-    <div className='w-full h-full 2xl:h-[800px] justify-center items-center flex 2xl:flex-row flex-col gap-[5rem] py-[4rem] 2xl:py-0'>
+    <div className='w-full h-full justify-center items-center flex 2xl:flex-row flex-col gap-[5rem] py-[4rem] 2xl:py-[6rem]'>
       <div className='flex gap-3 relative md:w-[63%] w-[90%] 2xl:w-[35%] md:flex md:justify-center'>
         <motion.div
           ref={ref}
