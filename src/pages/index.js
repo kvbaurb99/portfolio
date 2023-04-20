@@ -10,7 +10,7 @@ import LineUnderProjects from '@/components/utils/LineUnderProjects'
 
 export default function Home() {
   return (
-    <main className='h-full w-full'>
+    <main className='h-full w-full overflow-x-hidden'>
       <Hero />
       <Skills />
       <Line />
