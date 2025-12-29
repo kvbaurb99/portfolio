@@ -3,40 +3,42 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, Palette, Rocket, Users } from "lucide-react";
-
-const qualities = [
-  {
-    icon: Code2,
-    title: "Czysty Kod",
-    description: "Piszę czytelny, maintainowalny kod zgodny z najlepszymi praktykami.",
-  },
-  {
-    icon: Palette,
-    title: "Design Thinking",
-    description: "Projektuję z myślą o użytkowniku, łącząc estetykę z funkcjonalnością.",
-  },
-  {
-    icon: Rocket,
-    title: "Wydajność",
-    description: "Optymalizuję aplikacje pod kątem szybkości i Core Web Vitals.",
-  },
-  {
-    icon: Users,
-    title: "Współpraca",
-    description: "Cenię pracę zespołową i efektywną komunikację w projektach.",
-  },
-];
-
-const stats = [
-  { value: "2,5+", label: "Lat doświadczenia" },
-  { value: "10+", label: "Projektów komercyjnych" },
-  { value: "Miliony", label: "Wyświetleń/mies." },
-  { value: "100%", label: "Zaangażowania" },
-];
+import { useTranslations } from "next-intl";
 
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const t = useTranslations("about");
+
+  const qualities = [
+    {
+      icon: Code2,
+      title: t("qualities.clean_code.title"),
+      description: t("qualities.clean_code.description"),
+    },
+    {
+      icon: Palette,
+      title: t("qualities.design_thinking.title"),
+      description: t("qualities.design_thinking.description"),
+    },
+    {
+      icon: Rocket,
+      title: t("qualities.performance.title"),
+      description: t("qualities.performance.description"),
+    },
+    {
+      icon: Users,
+      title: t("qualities.collaboration.title"),
+      description: t("qualities.collaboration.description"),
+    },
+  ];
+
+  const stats = [
+    { value: "2,5+", label: t("stats.experience") },
+    { value: "10+", label: t("stats.projects") },
+    { value: "Miliony", label: t("stats.views") },
+    { value: "100%", label: t("stats.commitment") },
+  ];
 
   return (
     <section
@@ -70,14 +72,13 @@ export default function About() {
           className="text-center mb-20"
         >
           <span className="inline-block px-4 py-2 rounded-full text-sm font-medium text-[var(--accent-primary)] bg-[var(--accent-subtle)] mb-4">
-            O mnie
+            {t("badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Poznaj mnie <span className="text-gradient">bliżej</span>
+            {t("title")} <span className="text-gradient">{t("title_highlight")}</span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Jestem pasjonatem technologii webowych z wieloletnim doświadczeniem
-            w tworzeniu nowoczesnych aplikacji internetowych.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -175,24 +176,12 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              Tworzę <span className="text-gradient">wyjątkowe</span> doświadczenia webowe
+              {t("heading")} <span className="text-gradient">{t("heading_highlight")}</span> {t("heading_end")}
             </h3>
             <div className="space-y-4 text-[var(--foreground-muted)] leading-relaxed">
-              <p>
-                Od 2022 roku zajmuję się profesjonalnie tworzeniem aplikacji webowych.
-                Specjalizuję się w Next.js z SSR/ISR, tworząc wydajne platformy VOD,
-                systemy blogowe i marketplace&apos;y generujące miliony wyświetleń miesięcznie.
-              </p>
-              <p>
-                Skupiam się na optymalizacji Core Web Vitals, technicznym SEO
-                i wielojęzyczności (i18n). Moje projekty osiągają idealne wyniki
-                wydajności i wysoką widoczność w wyszukiwarkach.
-              </p>
-              <p>
-                Pracuję zarówno w zespole (Take Group), jak i jako freelancer,
-                dostarczając rozwiązania dla klientów z różnych branż - od platform
-                medialnych po strony dla klinik i trenerów.
-              </p>
+              <p>{t("paragraph1")}</p>
+              <p>{t("paragraph2")}</p>
+              <p>{t("paragraph3")}</p>
             </div>
 
             {/* CTA */}
@@ -203,7 +192,7 @@ export default function About() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Pobierz CV
+              {t("download_cv")}
               <motion.span
                 animate={{ x: [0, 4, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}

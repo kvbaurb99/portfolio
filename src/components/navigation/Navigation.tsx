@@ -3,20 +3,23 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-const navItems = [
-  { label: "Start", href: "#hero" },
-  { label: "O mnie", href: "#about" },
-  { label: "Umiejętności", href: "#skills" },
-  { label: "Projekty", href: "#projects" },
-  { label: "Doświadczenie", href: "#experience" },
-  { label: "Kontakt", href: "#contact" },
-];
+import { useTranslations } from "next-intl";
+import LanguageSwitch from "../ui/LanguageSwitch";
 
 export default function Navigation() {
+  const t = useTranslations("nav");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+
+  const navItems = [
+    { label: t("home"), href: "#hero" },
+    { label: t("about"), href: "#about" },
+    { label: t("skills"), href: "#skills" },
+    { label: t("projects"), href: "#projects" },
+    { label: t("experience"), href: "#experience" },
+    { label: t("contact"), href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +27,7 @@ export default function Navigation() {
 
       // Update active section based on scroll position
       const sections = navItems.map((item) => item.href.replace("#", ""));
-      for (const section of sections.reverse()) {
+      for (const section of [...sections].reverse()) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -38,6 +41,7 @@ export default function Navigation() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleNavClick = (href: string) => {
@@ -113,33 +117,41 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <motion.a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("#contact");
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-gradient rounded-full text-white text-sm font-semibold hover:opacity-90 transition-opacity"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Współpracujmy
-          </motion.a>
+          {/* Right side buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <LanguageSwitch />
+
+            {/* CTA Button */}
+            <motion.a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("#contact");
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="flex items-center gap-2 px-5 py-2.5 bg-gradient rounded-full text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t("cta")}
+            </motion.a>
+          </div>
 
           {/* Mobile Menu Toggle */}
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-[var(--foreground)]"
-            whileTap={{ scale: 0.9 }}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitch />
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-[var(--foreground)]"
+              whileTap={{ scale: 0.9 }}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </motion.button>
+          </div>
         </div>
       </motion.nav>
 
@@ -196,7 +208,7 @@ export default function Navigation() {
                   transition={{ delay: navItems.length * 0.05 }}
                   className="mt-4 px-4 py-3 bg-gradient rounded-lg text-center text-white font-semibold"
                 >
-                  Współpracujmy
+                  {t("cta")}
                 </motion.a>
               </div>
             </motion.div>

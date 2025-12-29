@@ -3,48 +3,50 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, Palette, Wrench, Layers, Sparkles } from "lucide-react";
-
-const skillCategories = [
-  {
-    title: "Języki & Frameworki",
-    icon: Code2,
-    color: "var(--accent-primary)",
-    description: "Główne technologie do budowy aplikacji",
-    skills: ["TypeScript", "JavaScript (ES6+)", "React.js", "Next.js", "HTML5", "CSS3"],
-  },
-  {
-    title: "Styling & UI",
-    icon: Palette,
-    color: "var(--accent-tertiary)",
-    description: "Tworzenie responsywnych interfejsów",
-    skills: ["Tailwind CSS", "Styled Components", "Radix UI", "Material UI", "CSS Modules", "RWD"],
-  },
-  {
-    title: "State & Data",
-    icon: Layers,
-    color: "#ec4899",
-    description: "Zarządzanie stanem i pobieranie danych",
-    skills: ["Zustand", "Redux", "React Query", "REST API", "GraphQL", "Axios"],
-  },
-  {
-    title: "Narzędzia & DevOps",
-    icon: Wrench,
-    color: "#22c55e",
-    description: "Narzędzia wspierające development",
-    skills: ["Git", "Docker", "Figma", "NextAuth.js", "Headless CMS", "Cursor"],
-  },
-];
-
-const specializations = [
-  { label: "Core Web Vitals", desc: "Optymalizacja wydajności" },
-  { label: "Techniczne SEO", desc: "Dane strukturalne, indeksowanie" },
-  { label: "SSR / ISR", desc: "Server-side rendering" },
-  { label: "i18n", desc: "Wielojęzyczność (next-intl)" },
-];
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const t = useTranslations("skills");
+
+  const skillCategories = [
+    {
+      title: t("categories.languages.title"),
+      icon: Code2,
+      color: "var(--accent-primary)",
+      description: t("categories.languages.description"),
+      skills: ["TypeScript", "JavaScript (ES6+)", "React.js", "Next.js", "HTML5", "CSS3"],
+    },
+    {
+      title: t("categories.styling.title"),
+      icon: Palette,
+      color: "var(--accent-tertiary)",
+      description: t("categories.styling.description"),
+      skills: ["Tailwind CSS", "Styled Components", "Radix UI", "Material UI", "CSS Modules", "RWD"],
+    },
+    {
+      title: t("categories.state.title"),
+      icon: Layers,
+      color: "#ec4899",
+      description: t("categories.state.description"),
+      skills: ["Zustand", "Redux", "React Query", "REST API", "GraphQL", "Axios"],
+    },
+    {
+      title: t("categories.tools.title"),
+      icon: Wrench,
+      color: "#22c55e",
+      description: t("categories.tools.description"),
+      skills: ["Git", "Docker", "Figma", "NextAuth.js", "Headless CMS", "Cursor"],
+    },
+  ];
+
+  const specializations = [
+    { label: t("specializations.core_web_vitals.label"), desc: t("specializations.core_web_vitals.desc") },
+    { label: t("specializations.technical_seo.label"), desc: t("specializations.technical_seo.desc") },
+    { label: t("specializations.ssr_isr.label"), desc: t("specializations.ssr_isr.desc") },
+    { label: t("specializations.i18n.label"), desc: t("specializations.i18n.desc") },
+  ];
 
   return (
     <section
@@ -83,14 +85,13 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full text-sm font-medium text-[var(--accent-primary)] bg-[var(--accent-subtle)] mb-4">
-            Umiejętności
+            {t("badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Mój <span className="text-gradient">tech stack</span>
+            {t("title")} <span className="text-gradient">{t("title_highlight")}</span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Technologie i narzędzia, których używam do tworzenia wydajnych
-            aplikacji webowych.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -182,7 +183,7 @@ export default function Skills() {
           className="mt-16 text-center"
         >
           <p className="text-[var(--foreground-muted)] mb-6">
-            Wykorzystuję również narzędzia AI do zwiększenia produktywności:
+            {t("ai_tools")}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {["ChatGPT", "Claude", "Gemini", "Cursor AI"].map((tool, index) => (

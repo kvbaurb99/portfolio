@@ -11,6 +11,7 @@ import {
   Zap,
   Sparkles,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com", label: "GitHub" },
@@ -26,6 +27,8 @@ const techItems = [
 ];
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <section
       id="hero"
@@ -69,7 +72,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
               </span>
               <span className="text-sm text-[var(--foreground-muted)]">
-                Dostępny do współpracy
+                {t("available")}
               </span>
             </motion.div>
 
@@ -80,9 +83,11 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight">
-                <span className="text-[var(--foreground)]">Cześć, jestem</span>
+                <span className="text-[var(--foreground)]">
+                  {t("greeting")}
+                </span>
                 <br />
-                <span className="text-gradient">Jakub Urbański</span>
+                <span className="text-gradient">{t("name")}</span>
               </h1>
             </motion.div>
 
@@ -94,15 +99,10 @@ export default function Hero() {
               className="mt-6"
             >
               <p className="text-xl sm:text-2xl text-[var(--accent-tertiary)] font-semibold mb-4">
-                Front-End Developer
+                {t("role")}
               </p>
               <p className="text-lg text-[var(--foreground-muted)] max-w-xl leading-relaxed">
-                Specjalizuję się w{" "}
-                <span className="text-[var(--accent-primary)]">React</span> i{" "}
-                <span className="text-[var(--accent-primary)]">Next.js</span>.
-                Tworzę nowoczesne aplikacje webowe z pasją do czystego kodu i
-                doskonałego UX. Przekształcam pomysły w funkcjonalne i piękne
-                produkty cyfrowe.
+                {t("description")}
               </p>
             </motion.div>
 
@@ -125,7 +125,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Zobacz projekty
+                {t("cta_projects")}
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition-transform"
@@ -144,7 +144,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Skontaktuj się
+                {t("cta_contact")}
               </motion.a>
             </motion.div>
 
@@ -156,7 +156,7 @@ export default function Hero() {
               className="flex items-center gap-4"
             >
               <span className="text-sm text-[var(--foreground-subtle)]">
-                Znajdź mnie:
+                {t("find_me")}
               </span>
               {socialLinks.map((social, index) => (
                 <motion.a

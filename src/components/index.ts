@@ -13,3 +13,4 @@ export { default as Footer } from "./footer/Footer";
 // UI Components
 export { default as SectionWrapper } from "./ui/SectionWrapper";
 export { default as GradientBackground } from "./ui/GradientBackground";
+export { default as LanguageSwitch } from "./ui/LanguageSwitch";

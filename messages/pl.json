@@ -1,0 +1,235 @@
+{
+  "nav": {
+    "home": "Start",
+    "about": "O mnie",
+    "skills": "Umiejętności",
+    "projects": "Projekty",
+    "experience": "Doświadczenie",
+    "contact": "Kontakt",
+    "cta": "Współpracujmy"
+  },
+  "hero": {
+    "available": "Dostępny do współpracy",
+    "greeting": "Cześć, jestem",
+    "name": "Jakub Urbański",
+    "role": "Front-End Developer",
+    "description": "Specjalizuję się w React i Next.js. Tworzę nowoczesne aplikacje webowe z pasją do czystego kodu i doskonałego UX. Przekształcam pomysły w funkcjonalne i piękne produkty cyfrowe.",
+    "cta_projects": "Zobacz projekty",
+    "cta_contact": "Skontaktuj się",
+    "find_me": "Znajdź mnie:"
+  },
+  "about": {
+    "badge": "O mnie",
+    "title": "Poznaj mnie",
+    "title_highlight": "bliżej",
+    "subtitle": "Jestem pasjonatem technologii webowych z wieloletnim doświadczeniem w tworzeniu nowoczesnych aplikacji internetowych.",
+    "heading": "Tworzę",
+    "heading_highlight": "wyjątkowe",
+    "heading_end": "doświadczenia webowe",
+    "paragraph1": "Od 2022 roku zajmuję się profesjonalnie tworzeniem aplikacji webowych. Specjalizuję się w Next.js z SSR/ISR, tworząc wydajne platformy VOD, systemy blogowe i marketplace'y generujące miliony wyświetleń miesięcznie.",
+    "paragraph2": "Skupiam się na optymalizacji Core Web Vitals, technicznym SEO i wielojęzyczności (i18n). Moje projekty osiągają idealne wyniki wydajności i wysoką widoczność w wyszukiwarkach.",
+    "paragraph3": "Pracuję zarówno w zespole (Take Group), jak i jako freelancer, dostarczając rozwiązania dla klientów z różnych branż - od platform medialnych po strony dla klinik i trenerów.",
+    "download_cv": "Pobierz CV",
+    "qualities": {
+      "clean_code": {
+        "title": "Czysty Kod",
+        "description": "Piszę czytelny, maintainowalny kod zgodny z najlepszymi praktykami."
+      },
+      "design_thinking": {
+        "title": "Design Thinking",
+        "description": "Projektuję z myślą o użytkowniku, łącząc estetykę z funkcjonalnością."
+      },
+      "performance": {
+        "title": "Wydajność",
+        "description": "Optymalizuję aplikacje pod kątem szybkości i Core Web Vitals."
+      },
+      "collaboration": {
+        "title": "Współpraca",
+        "description": "Cenię pracę zespołową i efektywną komunikację w projektach."
+      }
+    },
+    "stats": {
+      "experience": "Lat doświadczenia",
+      "projects": "Projektów komercyjnych",
+      "views": "Wyświetleń/mies.",
+      "commitment": "Zaangażowania"
+    }
+  },
+  "skills": {
+    "badge": "Umiejętności",
+    "title": "Mój",
+    "title_highlight": "tech stack",
+    "subtitle": "Technologie i narzędzia, których używam do tworzenia wydajnych aplikacji webowych.",
+    "specializations": {
+      "core_web_vitals": {
+        "label": "Core Web Vitals",
+        "desc": "Optymalizacja wydajności"
+      },
+      "technical_seo": {
+        "label": "Techniczne SEO",
+        "desc": "Dane strukturalne, indeksowanie"
+      },
+      "ssr_isr": {
+        "label": "SSR / ISR",
+        "desc": "Server-side rendering"
+      },
+      "i18n": {
+        "label": "i18n",
+        "desc": "Wielojęzyczność (next-intl)"
+      }
+    },
+    "categories": {
+      "languages": {
+        "title": "Języki & Frameworki",
+        "description": "Główne technologie do budowy aplikacji"
+      },
+      "styling": {
+        "title": "Styling & UI",
+        "description": "Tworzenie responsywnych interfejsów"
+      },
+      "state": {
+        "title": "State & Data",
+        "description": "Zarządzanie stanem i pobieranie danych"
+      },
+      "tools": {
+        "title": "Narzędzia & DevOps",
+        "description": "Narzędzia wspierające development"
+      }
+    },
+    "ai_tools": "Wykorzystuję również narzędzia AI do zwiększenia produktywności:"
+  },
+  "projects": {
+    "badge": "Portfolio",
+    "title": "Moje",
+    "title_highlight": "projekty",
+    "subtitle": "Wybrane projekty komercyjne, nad którymi pracowałem. Większość to projekty dla klientów biznesowych z ograniczonym dostępem publicznym.",
+    "filters": {
+      "all": "Wszystkie"
+    },
+    "commercial": "Komercyjny",
+    "view_project": "Zobacz projekt",
+    "commercial_project": "Projekt komercyjny",
+    "nda_info": "Większość projektów to prace komercyjne objęte NDA lub z ograniczonym dostępem.",
+    "nda_subinfo": "Chętnie opowiem więcej o moich projektach podczas rozmowy.",
+    "items": {
+      "vod": {
+        "title": "Platforma VOD",
+        "description": "Aplikacja Next.js dla platformy VOD obsługującej wiele układów stron i wersji językowych. Wdrożona na tysiącach domen, generująca miliony wyświetleń miesięcznie. Idealne wyniki Core Web Vitals.",
+        "highlights": [
+          "Miliony wyświetleń/mies.",
+          "100% Core Web Vitals",
+          "Multi-domain"
+        ]
+      },
+      "blog": {
+        "title": "System Blogowy",
+        "description": "System blogowy oparty na Next.js z 6 motywami wizualnymi i obsługą wielu języków. Dynamiczne artykuły pobierane z Headless CMS. Niektóre artykuły osiągają setki tysięcy wyświetleń.",
+        "highlights": ["6 motywów", "Headless CMS", "Schema.org"]
+      },
+      "takelink": {
+        "title": "Marketplace B2B - takelink.pl",
+        "description": "Transakcyjny panel łączący reklamodawców z siecią wydawców. Responsywny UI z Radix UI, zarządzanie stanem przez Zustand, uwierzytelnianie NextAuth.js i płatności pay-by-link.",
+        "highlights": ["System płatności", "Panel B2B", "Autoryzacja"]
+      },
+      "casino": {
+        "title": "CMS Recenzji Kasyn (LPCMS)",
+        "description": "Warstwa front-end dla platformy recenzji kasyn i gier z 8 wariacjami wizualnymi. Dynamiczne tabele porównawcze, systemy rankingowe i grywalne demo gier zintegrowane z Headless CMS.",
+        "highlights": ["8 motywów", "Tabele rankingowe", "Demo gier"]
+      },
+      "podology": {
+        "title": "Landing Page - Gabinet Podologiczny",
+        "description": "Profesjonalna strona internetowa dla gabinetu podologicznego. Nowoczesny design, optymalizacja SEO, responsywność i szybkie czasy ładowania. Formularz kontaktowy i integracja z Google Maps.",
+        "highlights": ["SEO", "RWD", "Google Maps"]
+      },
+      "trainers": {
+        "title": "Strony dla Trenerów",
+        "description": "Portfolio stron internetowych dla trenerów personalnych i fitness. Zoptymalizowane pod kątem SEO i Core Web Vitals, z systemem rezerwacji i galerią transformacji.",
+        "highlights": ["Portfolio", "Rezerwacje", "Galeria"]
+      }
+    }
+  },
+  "experience": {
+    "badge": "Doświadczenie",
+    "title": "Moja",
+    "title_highlight": "ścieżka",
+    "title_end": "kariery",
+    "subtitle": "Ponad 2,5 roku doświadczenia w tworzeniu nowoczesnych aplikacji webowych dla różnorodnych branż.",
+    "sidebar": {
+      "summary": "W skrócie",
+      "experience_label": "Doświadczenie",
+      "projects_label": "Projekty komercyjne",
+      "technologies_label": "Technologie",
+      "views_label": "Wyświetleń/mies.",
+      "specializations": "Specjalizacje"
+    },
+    "cta": {
+      "title": "Zainteresowany?",
+      "subtitle": "Pobierz moje CV, aby dowiedzieć się więcej",
+      "button": "Pobierz CV"
+    },
+    "items": {
+      "takegroup": {
+        "title": "Front-End Developer",
+        "company": "Take Group",
+        "location": "Zdalnie",
+        "period": "Lis. 2022 - Obecnie",
+        "description": "Tworzenie skalowalnych aplikacji webowych w Next.js dla platform VOD, systemów blogowych i marketplace'ów B2B. Optymalizacja Core Web Vitals, implementacja SSR/ISR, wielojęzyczności i danych strukturalnych dla SEO.",
+        "achievements": [
+          "Platforma VOD generująca miliony wyświetleń miesięcznie",
+          "System blogowy z 6 motywami wizualnymi dla Headless CMS",
+          "Marketplace B2B takelink.pl z NextAuth.js i płatnościami",
+          "Platforma recenzji z 8 wariacjami wizualnymi"
+        ]
+      },
+      "freelancer": {
+        "title": "Front-End Developer",
+        "company": "Freelancer",
+        "location": "Zdalnie",
+        "period": "Lut. 2022 - Obecnie",
+        "description": "Tworzenie stron internetowych i aplikacji dla różnorodnych klientów. Optymalizacja istniejących witryn pod kątem wydajności, UX i SEO. Diagnozowanie i rozwiązywanie krytycznych błędów.",
+        "achievements": [
+          "Strony dla kliniki medycznej, trenerów personalnych, agencji",
+          "Znacząca poprawa wyników Core Web Vitals",
+          "Refaktoryzacja i optymalizacja legacy code"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "badge": "Kontakt",
+    "title": "Porozmawiajmy o",
+    "title_highlight": "współpracy",
+    "subtitle": "Masz projekt do zrealizowania? Chętnie porozmawiam o tym, jak mogę pomóc w jego realizacji.",
+    "info": {
+      "email": "Email",
+      "phone": "Telefon",
+      "location": "Lokalizacja"
+    },
+    "find_me": "Znajdź mnie",
+    "quick_response": {
+      "title": "Szybka odpowiedź",
+      "text": "Zazwyczaj odpowiadam na wiadomości w ciągu 24 godzin. Nie wahaj się napisać!"
+    },
+    "form": {
+      "name": "Imię i nazwisko",
+      "name_placeholder": "Jan Kowalski",
+      "email": "Email",
+      "email_placeholder": "jan@example.com",
+      "subject": "Temat",
+      "subject_placeholder": "Współpraca nad projektem",
+      "message": "Wiadomość",
+      "message_placeholder": "Opisz swój projekt lub zadaj pytanie...",
+      "submit": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "success": "Wiadomość została wysłana! Odpowiem najszybciej jak to możliwe."
+    }
+  },
+  "footer": {
+    "description": "Front-End Developer tworzący nowoczesne aplikacje webowe z pasją do czystego kodu i doskonałego UX.",
+    "navigation": "Nawigacja",
+    "contact": "Kontakt",
+    "copyright": "Stworzono z",
+    "and": "i React.",
+    "back_to_top": "Na górę"
+  }
+}

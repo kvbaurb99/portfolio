@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "cta": "Let's work"
+  },
+  "hero": {
+    "available": "Available for work",
+    "greeting": "Hi, I'm",
+    "name": "Jakub Urbański",
+    "role": "Front-End Developer",
+    "description": "I specialize in React and Next.js. I create modern web applications with a passion for clean code and excellent UX. I transform ideas into functional and beautiful digital products.",
+    "cta_projects": "View projects",
+    "cta_contact": "Contact me",
+    "find_me": "Find me:"
+  },
+  "about": {
+    "badge": "About me",
+    "title": "Get to know me",
+    "title_highlight": "better",
+    "subtitle": "I'm a web technology enthusiast with years of experience building modern web applications.",
+    "heading": "I create",
+    "heading_highlight": "exceptional",
+    "heading_end": "web experiences",
+    "paragraph1": "Since 2022, I've been professionally building web applications. I specialize in Next.js with SSR/ISR, creating high-performance VOD platforms, blog systems, and marketplaces generating millions of views monthly.",
+    "paragraph2": "I focus on Core Web Vitals optimization, technical SEO, and internationalization (i18n). My projects achieve perfect performance scores and high search engine visibility.",
+    "paragraph3": "I work both in a team (Take Group) and as a freelancer, delivering solutions for clients from various industries - from media platforms to websites for clinics and trainers.",
+    "download_cv": "Download CV",
+    "qualities": {
+      "clean_code": {
+        "title": "Clean Code",
+        "description": "I write readable, maintainable code following best practices."
+      },
+      "design_thinking": {
+        "title": "Design Thinking",
+        "description": "I design with the user in mind, combining aesthetics with functionality."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "I optimize applications for speed and Core Web Vitals."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "I value teamwork and effective communication in projects."
+      }
+    },
+    "stats": {
+      "experience": "Years of experience",
+      "projects": "Commercial projects",
+      "views": "Views/month",
+      "commitment": "Commitment"
+    }
+  },
+  "skills": {
+    "badge": "Skills",
+    "title": "My",
+    "title_highlight": "tech stack",
+    "subtitle": "Technologies and tools I use to build efficient web applications.",
+    "specializations": {
+      "core_web_vitals": {
+        "label": "Core Web Vitals",
+        "desc": "Performance optimization"
+      },
+      "technical_seo": {
+        "label": "Technical SEO",
+        "desc": "Structured data, indexing"
+      },
+      "ssr_isr": {
+        "label": "SSR / ISR",
+        "desc": "Server-side rendering"
+      },
+      "i18n": {
+        "label": "i18n",
+        "desc": "Internationalization (next-intl)"
+      }
+    },
+    "categories": {
+      "languages": {
+        "title": "Languages & Frameworks",
+        "description": "Core technologies for building applications"
+      },
+      "styling": {
+        "title": "Styling & UI",
+        "description": "Creating responsive interfaces"
+      },
+      "state": {
+        "title": "State & Data",
+        "description": "State management and data fetching"
+      },
+      "tools": {
+        "title": "Tools & DevOps",
+        "description": "Development support tools"
+      }
+    },
+    "ai_tools": "I also use AI tools to boost productivity:"
+  },
+  "projects": {
+    "badge": "Portfolio",
+    "title": "My",
+    "title_highlight": "projects",
+    "subtitle": "Selected commercial projects I've worked on. Most are business client projects with limited public access.",
+    "filters": {
+      "all": "All"
+    },
+    "commercial": "Commercial",
+    "view_project": "View project",
+    "commercial_project": "Commercial project",
+    "nda_info": "Most projects are commercial work under NDA or with limited access.",
+    "nda_subinfo": "I'd be happy to tell you more about my projects during a conversation.",
+    "items": {
+      "vod": {
+        "title": "VOD Platform",
+        "description": "Next.js application for a VOD platform supporting multiple page layouts and language versions. Deployed on thousands of domains, generating millions of views monthly. Perfect Core Web Vitals scores.",
+        "highlights": ["Millions views/month", "100% Core Web Vitals", "Multi-domain"]
+      },
+      "blog": {
+        "title": "Blog System",
+        "description": "Next.js-based blog system with 6 visual themes and multi-language support. Dynamic articles fetched from Headless CMS. Some articles reach hundreds of thousands of views.",
+        "highlights": ["6 themes", "Headless CMS", "Schema.org"]
+      },
+      "takelink": {
+        "title": "B2B Marketplace - takelink.pl",
+        "description": "Transactional panel connecting advertisers with a network of publishers. Responsive UI with Radix UI, state management via Zustand, NextAuth.js authentication and pay-by-link payments.",
+        "highlights": ["Payment system", "B2B Panel", "Authorization"]
+      },
+      "casino": {
+        "title": "Casino Reviews CMS (LPCMS)",
+        "description": "Front-end layer for casino and games review platform with 8 visual variations. Dynamic comparison tables, ranking systems, and playable game demos integrated with Headless CMS.",
+        "highlights": ["8 themes", "Ranking tables", "Game demos"]
+      },
+      "podology": {
+        "title": "Landing Page - Podology Clinic",
+        "description": "Professional website for a podology clinic. Modern design, SEO optimization, responsiveness and fast loading times. Contact form and Google Maps integration.",
+        "highlights": ["SEO", "RWD", "Google Maps"]
+      },
+      "trainers": {
+        "title": "Trainer Websites",
+        "description": "Portfolio of websites for personal and fitness trainers. Optimized for SEO and Core Web Vitals, with booking system and transformation gallery.",
+        "highlights": ["Portfolio", "Bookings", "Gallery"]
+      }
+    }
+  },
+  "experience": {
+    "badge": "Experience",
+    "title": "My",
+    "title_highlight": "career",
+    "title_end": "path",
+    "subtitle": "Over 2.5 years of experience building modern web applications for various industries.",
+    "sidebar": {
+      "summary": "Summary",
+      "experience_label": "Experience",
+      "projects_label": "Commercial projects",
+      "technologies_label": "Technologies",
+      "views_label": "Views/month",
+      "specializations": "Specializations"
+    },
+    "cta": {
+      "title": "Interested?",
+      "subtitle": "Download my CV to learn more",
+      "button": "Download CV"
+    },
+    "items": {
+      "takegroup": {
+        "title": "Front-End Developer",
+        "company": "Take Group",
+        "location": "Remote",
+        "period": "Nov. 2022 - Present",
+        "description": "Building scalable web applications in Next.js for VOD platforms, blog systems, and B2B marketplaces. Core Web Vitals optimization, SSR/ISR implementation, internationalization, and structured data for SEO.",
+        "achievements": [
+          "VOD platform generating millions of views monthly",
+          "Blog system with 6 visual themes for Headless CMS",
+          "B2B marketplace takelink.pl with NextAuth.js and payments",
+          "Review platform with 8 visual variations"
+        ]
+      },
+      "freelancer": {
+        "title": "Front-End Developer",
+        "company": "Freelancer",
+        "location": "Remote",
+        "period": "Feb. 2022 - Present",
+        "description": "Building websites and applications for various clients. Optimizing existing sites for performance, UX, and SEO. Diagnosing and fixing critical bugs.",
+        "achievements": [
+          "Websites for medical clinic, personal trainers, agencies",
+          "Significant Core Web Vitals improvements",
+          "Legacy code refactoring and optimization"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Let's talk about",
+    "title_highlight": "collaboration",
+    "subtitle": "Have a project to complete? I'd be happy to discuss how I can help make it happen.",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "find_me": "Find me",
+    "quick_response": {
+      "title": "Quick response",
+      "text": "I usually respond to messages within 24 hours. Don't hesitate to write!"
+    },
+    "form": {
+      "name": "Full name",
+      "name_placeholder": "John Doe",
+      "email": "Email",
+      "email_placeholder": "john@example.com",
+      "subject": "Subject",
+      "subject_placeholder": "Project collaboration",
+      "message": "Message",
+      "message_placeholder": "Describe your project or ask a question...",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent! I'll respond as soon as possible."
+    }
+  },
+  "footer": {
+    "description": "Front-End Developer building modern web applications with a passion for clean code and excellent UX.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "copyright": "Built with",
+    "and": "and React.",
+    "back_to_top": "Back to top"
+  }
+}

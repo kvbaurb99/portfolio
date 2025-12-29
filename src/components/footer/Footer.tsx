@@ -2,25 +2,28 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const footerLinks = {
-  navigation: [
-    { label: "Start", href: "#hero" },
-    { label: "O mnie", href: "#about" },
-    { label: "Umiejętności", href: "#skills" },
-    { label: "Projekty", href: "#projects" },
-    { label: "Doświadczenie", href: "#experience" },
-    { label: "Kontakt", href: "#contact" },
-  ],
-  social: [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, href: "mailto:urbanskisoftware@gmail.com", label: "Email" },
-  ],
-};
+const socialLinks = [
+  { icon: Github, href: "https://github.com", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Mail, href: "mailto:urbanskisoftware@gmail.com", label: "Email" },
+];
 
 export default function Footer() {
+  const t = useTranslations("footer");
+  const tNav = useTranslations("nav");
+
+  const navigationLinks = [
+    { label: tNav("home"), href: "#hero" },
+    { label: tNav("about"), href: "#about" },
+    { label: tNav("skills"), href: "#skills" },
+    { label: tNav("projects"), href: "#projects" },
+    { label: tNav("experience"), href: "#experience" },
+    { label: tNav("contact"), href: "#contact" },
+  ];
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -55,11 +58,10 @@ export default function Footer() {
               </span>
             </motion.a>
             <p className="text-[var(--foreground-muted)] mb-6 max-w-xs">
-              Front-End Developer tworzący nowoczesne aplikacje webowe z pasją
-              do czystego kodu i doskonałego UX.
+              {t("description")}
             </p>
             <div className="flex gap-3">
-              {footerLinks.social.map((social) => (
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
@@ -78,9 +80,9 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="font-bold mb-4">Nawigacja</h3>
+            <h3 className="font-bold mb-4">{t("navigation")}</h3>
             <ul className="space-y-2">
-              {footerLinks.navigation.map((link) => (
+              {navigationLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
@@ -101,7 +103,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold mb-4">Kontakt</h3>
+            <h3 className="font-bold mb-4">{t("contact")}</h3>
             <ul className="space-y-2 text-[var(--foreground-muted)]">
               <li>urbanskisoftware@gmail.com</li>
               <li>+48 793 582 082</li>
@@ -124,7 +126,7 @@ export default function Footer() {
             whileTap={{ scale: 0.95 }}
           >
             <ArrowUp className="w-4 h-4" />
-            Na górę
+            {t("back_to_top")}
           </motion.button>
         </div>
       </div>
