@@ -147,6 +147,7 @@ export default function Navigation() {
               animate={{ opacity: 1 }}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-[var(--foreground)]"
+              aria-label="Menu"
               whileTap={{ scale: 0.9 }}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

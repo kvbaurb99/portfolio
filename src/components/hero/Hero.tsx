@@ -1,7 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
+  Code2,
+  Layers,
+  Zap,
+  Sparkles,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const socialLinks = [
@@ -210,6 +219,39 @@ export default function Hero() {
                   </motion.div>
                 );
               })}
+
+              {/* Floating icons with bounce animations */}
+              <motion.div
+                className="absolute top-1/4 left-1/4 p-3 rounded-xl glass"
+                animate={{ y: [0, -12, 0], rotate: [0, 5, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+              >
+                <Code2 className="w-6 h-6 text-[var(--accent-primary)]" />
+              </motion.div>
+
+              <motion.div
+                className="absolute top-1/3 right-1/4 p-3 rounded-xl glass"
+                animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
+              >
+                <Layers className="w-6 h-6 text-[var(--accent-tertiary)]" />
+              </motion.div>
+
+              <motion.div
+                className="absolute bottom-1/3 left-1/3 p-3 rounded-xl glass"
+                animate={{ y: [0, -10, 0], rotate: [0, -3, 0] }}
+                transition={{ duration: 4.5, repeat: Infinity, delay: 1 }}
+              >
+                <Zap className="w-6 h-6 text-amber-400" />
+              </motion.div>
+
+              <motion.div
+                className="absolute bottom-1/4 right-1/3 p-3 rounded-xl glass"
+                animate={{ y: [0, 8, 0], rotate: [0, 3, 0] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0.8 }}
+              >
+                <Sparkles className="w-6 h-6 text-pink-400" />
+              </motion.div>
 
               {/* Decorative SVG - static, no animation */}
               <svg
