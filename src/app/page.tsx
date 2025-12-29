@@ -15,10 +15,8 @@ export default function Home() {
     <>
       {/* Global animated background */}
       <GradientBackground variant="subtle" />
-
       {/* Navigation */}
       <Navigation />
-
       {/* Main content */}
       <main>
         <Hero />
