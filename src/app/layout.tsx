@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Syne, JetBrains_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { SchemaJsonLD } from "@/seo";
 import "./globals.css";
 
 const syne = Syne({
@@ -28,6 +29,9 @@ export const metadata: Metadata = {
     "JavaScript",
     "Web Developer",
     "Jakub Urbański",
+    "Bielsko-Biała",
+    "Polska",
+    "Programista",
   ],
   authors: [{ name: "Jakub Urbański" }],
   openGraph: {
@@ -48,6 +52,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="dark">
+      <head>
+        <SchemaJsonLD />
+      </head>
       <body
         className={`${syne.variable} ${jetbrainsMono.variable} antialiased`}
       >
