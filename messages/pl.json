@@ -13,7 +13,7 @@
     "greeting": "Cześć, jestem",
     "name": "Jakub Urbański",
     "role": "Front-End Developer",
-    "description": "Specjalizuję się w React i Next.js. Tworzę nowoczesne aplikacje webowe z pasją do czystego kodu i doskonałego UX. Przekształcam pomysły w funkcjonalne i piękne produkty cyfrowe.",
+    "description": "Specjalizuję się w tworzeniu nowoczesnych aplikacji webowych z pasją do czystego kodu i doskonałego UX. Przekształcam pomysły w funkcjonalne i piękne produkty cyfrowe.",
     "cta_projects": "Zobacz projekty",
     "cta_contact": "Skontaktuj się",
     "find_me": "Znajdź mnie:"
@@ -116,7 +116,6 @@
         "title": "Platforma VOD",
         "description": "Aplikacja Next.js dla platformy VOD obsługującej wiele układów stron i wersji językowych. Wdrożona na tysiącach domen, generująca miliony wyświetleń miesięcznie. Idealne wyniki Core Web Vitals.",
         "highlights": [
-          "Miliony wyświetleń/mies.",
           "100% Core Web Vitals",
           "Multi-domain"
         ]
@@ -188,8 +187,8 @@
         "period": "Lut. 2022 - Obecnie",
         "description": "Tworzenie stron internetowych i aplikacji dla różnorodnych klientów. Optymalizacja istniejących witryn pod kątem wydajności, UX i SEO. Diagnozowanie i rozwiązywanie krytycznych błędów.",
         "achievements": [
-          "Strony dla kliniki medycznej, trenerów personalnych, agencji",
-          "Znacząca poprawa wyników Core Web Vitals",
+          "Strony dla kliniki medycznej, trenerów personalnych, agencji redakcji tekstu",
+          "Znacząca poprawa wyników Core Web Vitals oraz optymalizacja wybranych stron",
           "Refaktoryzacja i optymalizacja legacy code"
         ]
       }

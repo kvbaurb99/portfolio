@@ -174,14 +174,6 @@ export default function Experience() {
                     15+
                   </span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-[var(--foreground-muted)]">
-                    {t("sidebar.views_label")}
-                  </span>
-                  <span className="font-bold text-[var(--accent-primary)]">
-                    Millions
-                  </span>
-                </div>
               </div>
             </motion.div>
 

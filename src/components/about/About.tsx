@@ -125,11 +125,11 @@ export default function About() {
                       <span className="text-green-400">&quot;Front-End Dev&quot;</span>,
                     </div>
                     <div className="pl-4 text-[var(--foreground-muted)]">
-                      <span className="text-[var(--accent-tertiary)]">passion</span>:{" "}
+                      <span className="text-[var(--accent-tertiary)]">main_tech</span>:{" "}
                       <span className="text-green-400">&quot;React & Next.js&quot;</span>,
                     </div>
                     <div className="pl-4 text-[var(--foreground-muted)]">
-                      <span className="text-[var(--accent-tertiary)]">loves</span>: [
+                      <span className="text-[var(--accent-tertiary)]">building_with</span>: [
                     </div>
                     <div className="pl-8 text-green-400">
                       &quot;Clean Code&quot;,
