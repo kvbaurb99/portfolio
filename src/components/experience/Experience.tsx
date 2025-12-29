@@ -155,7 +155,7 @@ export default function Experience() {
                     {t("sidebar.experience_label")}
                   </span>
                   <span className="font-bold text-[var(--accent-primary)]">
-                    2,5+ lat
+                    3+ lat
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
@@ -163,7 +163,7 @@ export default function Experience() {
                     {t("sidebar.projects_label")}
                   </span>
                   <span className="font-bold text-[var(--accent-primary)]">
-                    10+
+                    5+
                   </span>
                 </div>
                 <div className="flex justify-between items-center">

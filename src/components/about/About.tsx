@@ -34,8 +34,8 @@ export default function About() {
   ];
 
   const stats = [
-    { value: "2,5+", label: t("stats.experience") },
-    { value: "10+", label: t("stats.projects") },
+    { value: "3+", label: t("stats.experience") },
+    { value: "5+", label: t("stats.projects") },
     { value: "Miliony", label: t("stats.views") },
     { value: "100%", label: t("stats.commitment") },
   ];

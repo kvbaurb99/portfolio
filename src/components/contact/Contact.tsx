@@ -2,21 +2,12 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import {
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-  Linkedin,
-  Github,
-  Twitter,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Send, Linkedin, Github } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
 export default function Contact() {
