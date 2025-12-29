@@ -41,25 +41,14 @@ export default function About() {
   ];
 
   return (
-    <section
-      id="about"
-      ref={ref}
-      className="relative py-32 overflow-hidden"
-    >
-      {/* Background gradient */}
+    <section id="about" ref={ref} className="relative py-32 overflow-hidden">
+      {/* Background gradient - static */}
       <div className="absolute inset-0 bg-[var(--gradient-dark)]" />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full"
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
         style={{
           background: "var(--gradient-radial)",
-        }}
-        animate={{
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
+          transform: "translate(-50%, -50%) translateZ(0)",
         }}
       />
 
@@ -75,7 +64,8 @@ export default function About() {
             {t("badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t("title")} <span className="text-gradient">{t("title_highlight")}</span>
+            {t("title")}{" "}
+            <span className="text-gradient">{t("title_highlight")}</span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
             {t("subtitle")}
@@ -92,44 +82,64 @@ export default function About() {
             className="relative"
           >
             <div className="relative aspect-square max-w-md mx-auto">
-              {/* Decorative elements */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-24 h-24 border-2 border-[var(--accent-primary)] rounded-2xl"
-                animate={{ rotate: [0, 5, 0] }}
-                transition={{ duration: 6, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-32 h-32 bg-[var(--accent-subtle)] rounded-2xl"
-                animate={{ rotate: [0, -5, 0] }}
-                transition={{ duration: 6, repeat: Infinity }}
-              />
-              
+              {/* Decorative elements - static */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-[var(--accent-primary)] rounded-2xl" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[var(--accent-subtle)] rounded-2xl" />
+
               {/* Main image container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden glass">
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-secondary)] via-[var(--accent-primary)] to-[var(--accent-tertiary)] opacity-20" />
-                
+
                 {/* Code snippet decoration */}
                 <div className="absolute inset-4 flex items-center justify-center">
                   <div className="w-full p-6 font-mono text-sm">
-                    <div className="text-[var(--foreground-subtle)] mb-2">{"// About me"}</div>
+                    <div className="text-[var(--foreground-subtle)] mb-2">
+                      {"// About me"}
+                    </div>
                     <div className="text-[var(--foreground-muted)]">
-                      <span className="text-[var(--accent-tertiary)]">const</span>{" "}
-                      <span className="text-[var(--accent-primary)]">developer</span> = {"{"}
+                      <span className="text-[var(--accent-tertiary)]">
+                        const
+                      </span>{" "}
+                      <span className="text-[var(--accent-primary)]">
+                        developer
+                      </span>{" "}
+                      = {"{"}
                     </div>
                     <div className="pl-4 text-[var(--foreground-muted)]">
-                      <span className="text-[var(--accent-tertiary)]">name</span>:{" "}
-                      <span className="text-green-400">&quot;Jakub Urbański&quot;</span>,
+                      <span className="text-[var(--accent-tertiary)]">
+                        name
+                      </span>
+                      :{" "}
+                      <span className="text-green-400">
+                        &quot;Jakub Urbański&quot;
+                      </span>
+                      ,
                     </div>
                     <div className="pl-4 text-[var(--foreground-muted)]">
-                      <span className="text-[var(--accent-tertiary)]">role</span>:{" "}
-                      <span className="text-green-400">&quot;Front-End Dev&quot;</span>,
+                      <span className="text-[var(--accent-tertiary)]">
+                        role
+                      </span>
+                      :{" "}
+                      <span className="text-green-400">
+                        &quot;Front-End Dev&quot;
+                      </span>
+                      ,
                     </div>
                     <div className="pl-4 text-[var(--foreground-muted)]">
-                      <span className="text-[var(--accent-tertiary)]">main_tech</span>:{" "}
-                      <span className="text-green-400">&quot;React & Next.js&quot;</span>,
+                      <span className="text-[var(--accent-tertiary)]">
+                        main_tech
+                      </span>
+                      :{" "}
+                      <span className="text-green-400">
+                        &quot;React & Next.js&quot;
+                      </span>
+                      ,
                     </div>
                     <div className="pl-4 text-[var(--foreground-muted)]">
-                      <span className="text-[var(--accent-tertiary)]">building_with</span>: [
+                      <span className="text-[var(--accent-tertiary)]">
+                        building_with
+                      </span>
+                      : [
                     </div>
                     <div className="pl-8 text-green-400">
                       &quot;Clean Code&quot;,
@@ -146,26 +156,18 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Floating badge */}
-              <motion.div
-                className="absolute -right-6 top-1/4 px-4 py-2 glass rounded-lg"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
+              {/* Floating badges - static */}
+              <div className="absolute -right-6 top-1/4 px-4 py-2 glass rounded-lg">
                 <span className="text-sm font-medium text-[var(--accent-primary)]">
                   React Expert
                 </span>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="absolute -left-6 bottom-1/4 px-4 py-2 glass rounded-lg"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-              >
+              <div className="absolute -left-6 bottom-1/4 px-4 py-2 glass rounded-lg">
                 <span className="text-sm font-medium text-[var(--accent-tertiary)]">
                   Next.js Pro
                 </span>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
 
@@ -176,7 +178,9 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              {t("heading")} <span className="text-gradient">{t("heading_highlight")}</span> {t("heading_end")}
+              {t("heading")}{" "}
+              <span className="text-gradient">{t("heading_highlight")}</span>{" "}
+              {t("heading_end")}
             </h3>
             <div className="space-y-4 text-[var(--foreground-muted)] leading-relaxed">
               <p>{t("paragraph1")}</p>
@@ -185,21 +189,14 @@ export default function About() {
             </div>
 
             {/* CTA */}
-            <motion.a
+            <a
               href="/cv.pdf"
               target="_blank"
-              className="inline-flex items-center gap-2 mt-8 px-6 py-3 border border-[var(--accent-primary)] rounded-full text-[var(--accent-primary)] font-medium hover:bg-[var(--accent-subtle)] transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 mt-8 px-6 py-3 border border-[var(--accent-primary)] rounded-full text-[var(--accent-primary)] font-medium hover:bg-[var(--accent-subtle)] transition-colors hover:scale-105 active:scale-95"
             >
               {t("download_cv")}
-              <motion.span
-                animate={{ x: [0, 4, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                →
-              </motion.span>
-            </motion.a>
+              <span>→</span>
+            </a>
           </motion.div>
         </div>
 
@@ -231,21 +228,11 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 rounded-2xl glass"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={isInView ? { scale: 1 } : {}}
-                transition={{
-                  type: "spring",
-                  stiffness: 200,
-                  damping: 15,
-                  delay: 1 + index * 0.1,
-                }}
-                className="text-4xl md:text-5xl font-bold text-gradient mb-2"
-              >
+              <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
                 {stat.value}
-              </motion.div>
+              </div>
               <div className="text-sm text-[var(--foreground-muted)]">
                 {stat.label}
               </div>

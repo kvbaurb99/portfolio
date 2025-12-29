@@ -92,12 +92,11 @@ export default function Projects() {
 
   return (
     <section id="projects" ref={ref} className="relative py-32 overflow-hidden">
-      {/* Background */}
+      {/* Background - static */}
       <div className="absolute inset-0 bg-[var(--background)]" />
-      <motion.div
-        className="absolute top-1/3 left-1/4 w-96 h-96 bg-[var(--accent-secondary)] rounded-full blur-[200px] opacity-10"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 12, repeat: Infinity }}
+      <div
+        className="absolute top-1/3 left-1/4 w-64 h-64 bg-[var(--accent-secondary)] rounded-full opacity-10"
+        style={{ filter: "blur(80px)", transform: "translateZ(0)" }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">

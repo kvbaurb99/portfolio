@@ -14,7 +14,14 @@ export default function Experience() {
     {
       id: "takegroup",
       type: "work",
-      skills: ["Next.js", "TypeScript", "styled-components", "Tailwind CSS", "Zustand", "REST API"],
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "styled-components",
+        "Tailwind CSS",
+        "Zustand",
+        "REST API",
+      ],
     },
     {
       id: "freelancer",
@@ -33,11 +40,10 @@ export default function Experience() {
       <div className="absolute inset-0 bg-[var(--background-secondary)]" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
-      {/* Decorative elements */}
-      <motion.div
-        className="absolute -right-32 top-1/3 w-64 h-64 bg-[var(--accent-primary)] rounded-full blur-[150px] opacity-10"
-        animate={{ y: [0, 50, 0] }}
-        transition={{ duration: 15, repeat: Infinity }}
+      {/* Decorative elements - static */}
+      <div
+        className="absolute -right-32 top-1/3 w-48 h-48 bg-[var(--accent-primary)] rounded-full opacity-10"
+        style={{ filter: "blur(80px)", transform: "translateZ(0)" }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -52,7 +58,9 @@ export default function Experience() {
             {t("badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t("title")} <span className="text-gradient">{t("title_highlight")}</span> {t("title_end")}
+            {t("title")}{" "}
+            <span className="text-gradient">{t("title_highlight")}</span>{" "}
+            {t("title_end")}
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
             {t("subtitle")}
@@ -111,15 +119,19 @@ export default function Experience() {
 
                     {/* Achievements */}
                     <ul className="mb-4 space-y-2">
-                      {(t.raw(`items.${exp.id}.achievements`) as string[]).map((achievement: string, i: number) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-2 text-sm text-[var(--foreground-muted)]"
-                        >
-                          <span className="text-[var(--accent-primary)] mt-1">▸</span>
-                          {achievement}
-                        </li>
-                      ))}
+                      {(t.raw(`items.${exp.id}.achievements`) as string[]).map(
+                        (achievement: string, i: number) => (
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-sm text-[var(--foreground-muted)]"
+                          >
+                            <span className="text-[var(--accent-primary)] mt-1">
+                              ▸
+                            </span>
+                            {achievement}
+                          </li>
+                        )
+                      )}
                     </ul>
 
                     {/* Skills */}
@@ -184,7 +196,9 @@ export default function Experience() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="p-6 rounded-2xl glass"
             >
-              <h3 className="text-lg font-bold mb-4">{t("sidebar.specializations")}</h3>
+              <h3 className="text-lg font-bold mb-4">
+                {t("sidebar.specializations")}
+              </h3>
               <div className="space-y-3">
                 {[
                   "Next.js Apps (SSR/ISR)",
@@ -212,9 +226,7 @@ export default function Experience() {
               className="p-6 rounded-2xl bg-gradient text-white text-center"
             >
               <h3 className="text-lg font-bold mb-2">{t("cta.title")}</h3>
-              <p className="text-sm text-white/80 mb-4">
-                {t("cta.subtitle")}
-              </p>
+              <p className="text-sm text-white/80 mb-4">{t("cta.subtitle")}</p>
               <motion.a
                 href="/cv.pdf"
                 target="_blank"
