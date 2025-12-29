@@ -1,20 +1,26 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { ExternalLink, Lock } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeFilter, setActiveFilter] = useState("all");
   const t = useTranslations("projects");
 
   const projects = [
     {
       id: "vod",
-      tags: ["Next.js", "TypeScript", "styled-components", "SSR", "i18n", "REST API"],
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "styled-components",
+        "SSR",
+        "i18n",
+        "REST API",
+      ],
       liveUrl: null,
       isCommercial: true,
       featured: true,
@@ -23,7 +29,14 @@ export default function Projects() {
     },
     {
       id: "blog",
-      tags: ["Next.js", "TypeScript", "styled-components", "Headless CMS", "i18n", "SEO"],
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "styled-components",
+        "Headless CMS",
+        "i18n",
+        "SEO",
+      ],
       liveUrl: null,
       isCommercial: true,
       featured: true,
@@ -41,7 +54,13 @@ export default function Projects() {
     },
     {
       id: "casino",
-      tags: ["Next.js", "TypeScript", "styled-components", "Tailwind CSS", "i18n"],
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "styled-components",
+        "Tailwind CSS",
+        "i18n",
+      ],
       liveUrl: null,
       isCommercial: true,
       featured: false,
@@ -68,25 +87,8 @@ export default function Projects() {
     },
   ];
 
-  const filters = [
-    { id: "all", label: t("filters.all") },
-    { id: "Next.js", label: "Next.js" },
-    { id: "TypeScript", label: "TypeScript" },
-    { id: "Tailwind CSS", label: "Tailwind CSS" },
-    { id: "SEO", label: "SEO" },
-  ];
-
-  const filteredProjects =
-    activeFilter === "all"
-      ? projects
-      : projects.filter((project) =>
-          project.tags.some((tag) =>
-            tag.toLowerCase().includes(activeFilter.toLowerCase())
-          )
-        );
-
-  const featuredProjects = filteredProjects.filter((p) => p.featured);
-  const otherProjects = filteredProjects.filter((p) => !p.featured);
+  const featuredProjects = projects.filter((p) => p.featured);
+  const otherProjects = projects.filter((p) => !p.featured);
 
   return (
     <section id="projects" ref={ref} className="relative py-32 overflow-hidden">
@@ -110,33 +112,12 @@ export default function Projects() {
             {t("badge")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t("title")} <span className="text-gradient">{t("title_highlight")}</span>
+            {t("title")}{" "}
+            <span className="text-gradient">{t("title_highlight")}</span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
             {t("subtitle")}
           </p>
-        </motion.div>
-
-        {/* Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
-          {filters.map((filter) => (
-            <button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeFilter === filter.id
-                  ? "bg-gradient text-white"
-                  : "glass text-[var(--foreground-muted)] hover:text-[var(--foreground)]"
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
         </motion.div>
 
         {/* Featured projects */}
@@ -186,14 +167,16 @@ export default function Projects() {
 
                 {/* Highlights */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {(t.raw(`items.${project.id}.highlights`) as string[]).map((highlight: string) => (
-                    <span
-                      key={highlight}
-                      className="px-2 py-1 rounded-md text-xs font-medium border border-[var(--accent-primary)]/30 text-[var(--accent-tertiary)]"
-                    >
-                      {highlight}
-                    </span>
-                  ))}
+                  {(t.raw(`items.${project.id}.highlights`) as string[]).map(
+                    (highlight: string) => (
+                      <span
+                        key={highlight}
+                        className="px-2 py-1 rounded-md text-xs font-medium border border-[var(--accent-primary)]/30 text-[var(--accent-tertiary)]"
+                      >
+                        {highlight}
+                      </span>
+                    )
+                  )}
                 </div>
 
                 {/* Tags */}
