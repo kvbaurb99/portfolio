@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     "Polska",
     "Programista",
   ],
+  robots: {
+    index: false,
+    follow: false,
+  },
   authors: [{ name: "Jakub Urbański" }],
   openGraph: {
     title: "Jakub Urbański | Front-End Developer",

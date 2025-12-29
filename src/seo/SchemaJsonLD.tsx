@@ -6,7 +6,7 @@ import type {
   WithContext,
 } from "schema-dts";
 
-const baseUrl = "https://jakuburbanski.dev";
+const baseUrl = "https://urbanskisoftware.pl";
 
 // Person Schema - Main profile information
 export const personSchema: WithContext<Person> = {
