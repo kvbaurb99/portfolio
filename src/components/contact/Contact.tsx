@@ -52,15 +52,39 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormState({ name: "", email: "", subject: "", message: "" });
+      const data = await response.json();
 
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+      if (!response.ok) {
+        throw new Error(data.error || "Błąd podczas wysyłania wiadomości");
+      }
+
+      setIsSubmitted(true);
+      setFormState({ name: "", email: "", subject: "", message: "" });
+
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      // Lepsze wyświetlanie błędów zamiast alert
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.";
+
+      // Możesz dodać tutaj toast notification zamiast alert
+      alert(errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
