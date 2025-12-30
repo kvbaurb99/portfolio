@@ -3,12 +3,16 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, Palette, Rocket, Users } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const t = useTranslations("about");
+  const locale = useLocale();
+
+  // Wybór odpowiedniego pliku CV w zależności od języka
+  const cvPath = locale === "pl" ? "/RESUME_JU_PL.pdf" : "/RESUME_JU_EN.pdf";
 
   const qualities = [
     {
@@ -190,8 +194,9 @@ export default function About() {
 
             {/* CTA */}
             <a
-              href="/cv.pdf"
+              href={cvPath}
               target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-8 px-6 py-3 border border-[var(--accent-primary)] rounded-full text-[var(--accent-primary)] font-medium hover:bg-[var(--accent-subtle)] transition-colors hover:scale-105 active:scale-95"
             >
               {t("download_cv")}

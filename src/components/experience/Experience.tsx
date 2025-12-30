@@ -3,12 +3,16 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Laptop } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Experience() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const t = useTranslations("experience");
+  const locale = useLocale();
+
+  // Wybór odpowiedniego pliku CV w zależności od języka
+  const cvPath = locale === "pl" ? "/RESUME_JU_PL.pdf" : "/RESUME_JU_EN.pdf";
 
   const experiences = [
     {
@@ -228,8 +232,9 @@ export default function Experience() {
               <h3 className="text-lg font-bold mb-2">{t("cta.title")}</h3>
               <p className="text-sm text-white/80 mb-4">{t("cta.subtitle")}</p>
               <motion.a
-                href="/cv.pdf"
+                href={cvPath}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-6 py-2 rounded-full bg-white text-[var(--accent-secondary)] font-medium hover:bg-white/90 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
