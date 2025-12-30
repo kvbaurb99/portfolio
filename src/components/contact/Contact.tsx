@@ -6,8 +6,12 @@ import { Mail, MapPin, Phone, Send, Linkedin, Github } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/kvbaurb99", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/jakub-urbanski-99a2k/",
+    label: "LinkedIn",
+  },
 ];
 
 export default function Contact() {

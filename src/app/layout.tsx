@@ -28,9 +28,11 @@ export const metadata: Metadata = {
     "TypeScript",
     "JavaScript",
     "Web Developer",
+    "strony internetowe",
     "Jakub Urbański",
-    "Bielsko-Biała",
-    "Polska",
+    "bielsko biała",
+    "bielsko biala",
+    "polska",
     "Programista",
   ],
   robots: {

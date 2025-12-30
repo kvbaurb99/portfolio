@@ -29,8 +29,8 @@ export const personSchema: WithContext<Person> = {
     addressCountry: "PL",
   },
   sameAs: [
-    "https://github.com/jakuburbanski",
-    "https://linkedin.com/in/jakuburbanski",
+    "https://github.com/kvbaurb99",
+    "https://www.linkedin.com/in/jakub-urbanski-99a2k/",
   ],
   knowsAbout: [
     "React.js",

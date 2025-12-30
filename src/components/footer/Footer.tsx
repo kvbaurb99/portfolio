@@ -5,8 +5,12 @@ import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/kvbaurb99", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/jakub-urbanski-99a2k/",
+    label: "LinkedIn",
+  },
   { icon: Mail, href: "mailto:urbanskisoftware@gmail.com", label: "Email" },
 ];
 
