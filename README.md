@@ -64,7 +64,7 @@ messages/
 ### Wymagania
 
 - Node.js 18+
-- npm / yarn / pnpm
+- Bun (zalecane) lub npm / yarn
 
 ### Instalacja
 
@@ -73,11 +73,11 @@ messages/
 git clone https://github.com/jakuburbanski/portfolio.git
 cd portfolio
 
-# Instalacja zależności
-npm install
+# Instalacja zależności (używając bun)
+bun install
 
 # Uruchomienie serwera developerskiego
-npm run dev
+bun run dev
 ```
 
 Otwórz [http://localhost:3000](http://localhost:3000) w przeglądarce.
@@ -85,8 +85,8 @@ Otwórz [http://localhost:3000](http://localhost:3000) w przeglądarce.
 ### Budowanie produkcyjne
 
 ```bash
-npm run build
-npm start
+bun run build
+bun start
 ```
 
 ## 🎨 Personalizacja
