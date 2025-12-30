@@ -5,7 +5,6 @@ export {
   personSchema,
   websiteSchema,
   webPageSchema,
-  organizationSchema,
   professionalServiceSchema,
   allSchemas,
 } from "./SchemaJsonLD";

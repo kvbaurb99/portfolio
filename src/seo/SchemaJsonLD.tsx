@@ -100,18 +100,6 @@ export const webPageSchema: WithContext<WebPage> = {
   dateModified: new Date().toISOString().split("T")[0],
 };
 
-// Organization Schema for Take Group
-export const organizationSchema: WithContext<Organization> = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${baseUrl}/#takegroup`,
-  name: "Take Group",
-  url: "https://takegroup.pl",
-  employee: {
-    "@id": `${baseUrl}/#person`,
-  },
-};
-
 // Professional Service Schema
 export const professionalServiceSchema: WithContext<Organization> = {
   "@context": "https://schema.org",
