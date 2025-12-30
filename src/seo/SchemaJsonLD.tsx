@@ -48,15 +48,6 @@ export const personSchema: WithContext<Person> = {
     "REST API",
     "GraphQL",
   ],
-  worksFor: {
-    "@type": "Organization",
-    name: "Take Group",
-    url: "https://takegroup.pl",
-  },
-  alumniOf: {
-    "@type": "Organization",
-    name: "Freelancer",
-  },
 };
 
 // WebSite Schema
@@ -109,6 +100,11 @@ export const professionalServiceSchema: WithContext<Organization> = {
   description:
     "Profesjonalne usługi tworzenia aplikacji webowych w React i Next.js. Optymalizacja Core Web Vitals, techniczne SEO, wielojęzyczność.",
   url: baseUrl,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bielsko-Biała",
+    addressCountry: "PL",
+  },
   provider: {
     "@id": `${baseUrl}/#person`,
   },
