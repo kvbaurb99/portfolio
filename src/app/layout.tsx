@@ -56,6 +56,10 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="dark">
       <head>
+        <meta
+          name="google-site-verification"
+          content="-pjPr6VbbsPnN41MFojOfpUmDguiWvGxCHEvwF2VU3g"
+        />
         <SchemaJsonLD />
       </head>
       <body
