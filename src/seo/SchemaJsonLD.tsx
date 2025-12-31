@@ -12,7 +12,7 @@ const baseUrl = "https://urbanskisoftware.pl";
 export const personSchema: WithContext<Person> = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": `${baseUrl}/#person`,
+  "@id": `${baseUrl}/#about`,
   name: "Jakub Urbański",
   givenName: "Jakub",
   familyName: "Urbański",
@@ -55,17 +55,17 @@ export const personSchema: WithContext<Person> = {
 export const websiteSchema: WithContext<WebSite> = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": `${baseUrl}/#website`,
+  "@id": `${baseUrl}`,
   name: "Jakub Urbański - Front-End Developer Portfolio",
   description:
     "Portfolio Front-End Developera specjalizującego się w React i Next.js. Nowoczesne aplikacje webowe, optymalizacja wydajności, techniczne SEO.",
   url: baseUrl,
   inLanguage: ["pl-PL", "en"],
   author: {
-    "@id": `${baseUrl}/#person`,
+    "@id": `${baseUrl}/#about`,
   },
   publisher: {
-    "@id": `${baseUrl}/#person`,
+    "@id": `${baseUrl}/#about`,
   },
 };
 
@@ -73,19 +73,19 @@ export const websiteSchema: WithContext<WebSite> = {
 export const webPageSchema: WithContext<WebPage> = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `${baseUrl}/#webpage`,
+  "@id": `${baseUrl}`,
   name: "Jakub Urbański | Front-End Developer",
   description:
     "Portfolio Front-End Developera specjalizującego się w React i Next.js. Tworzę nowoczesne, responsywne i wydajne aplikacje webowe.",
   url: baseUrl,
   isPartOf: {
-    "@id": `${baseUrl}/#website`,
+    "@id": `${baseUrl}`,
   },
   about: {
-    "@id": `${baseUrl}/#person`,
+    "@id": `${baseUrl}/#about`,
   },
   mainEntity: {
-    "@id": `${baseUrl}/#person`,
+    "@id": `${baseUrl}/#about`,
   },
   inLanguage: "pl-PL",
   datePublished: "2024-01-01",
@@ -96,7 +96,7 @@ export const webPageSchema: WithContext<WebPage> = {
 export const professionalServiceSchema: WithContext<Organization> = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": `${baseUrl}/#service`,
+  "@id": `${baseUrl}`,
   name: "Jakub Urbański - Usługi Front-End Development",
   description:
     "Profesjonalne usługi tworzenia aplikacji webowych w React i Next.js. Optymalizacja Core Web Vitals, techniczne SEO, wielojęzyczność.",
@@ -109,7 +109,7 @@ export const professionalServiceSchema: WithContext<Organization> = {
     addressCountry: "PL",
   },
   provider: {
-    "@id": `${baseUrl}/#person`,
+    "@id": `${baseUrl}/#about`,
   },
   areaServed: {
     "@type": "Country",
