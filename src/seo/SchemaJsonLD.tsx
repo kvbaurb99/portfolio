@@ -22,7 +22,6 @@ export const personSchema: WithContext<Person> = {
   url: baseUrl,
   email: "urbanskisoftware@gmail.com",
   telephone: "+48793582082",
-  image: `${baseUrl}/images/jakub-urbanski.jpg`,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bielsko-Biała",
