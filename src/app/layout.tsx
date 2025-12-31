@@ -9,17 +9,28 @@ import "./globals.css";
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   preload: true,
+  fallback: [
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Arial",
+    "sans-serif",
+  ],
+  adjustFontFallback: true,
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   display: "swap",
   preload: true,
+  fallback: ["monospace", "Courier New"],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
