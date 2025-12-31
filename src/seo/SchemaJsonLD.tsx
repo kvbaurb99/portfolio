@@ -25,6 +25,8 @@ export const personSchema: WithContext<Person> = {
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bielsko-Biała",
+    addressRegion: "Śląskie",
+    postalCode: "43-300",
     addressCountry: "PL",
   },
   sameAs: [
@@ -102,6 +104,8 @@ export const professionalServiceSchema: WithContext<Organization> = {
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bielsko-Biała",
+    addressRegion: "Śląskie",
+    postalCode: "43-300",
     addressCountry: "PL",
   },
   provider: {
